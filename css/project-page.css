@@ -1,0 +1,21 @@
+#about-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#about-container > fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  box-shadow: 1px 1px 3px 0px;
+  border: none;
+  padding: 16px;
+}
+
+@media (max-width: 540px) {
+  #about-container fieldset > h4 {
+    font-size: 12px;
+    transition: 1s;
+  }
+}

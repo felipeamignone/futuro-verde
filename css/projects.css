@@ -1,0 +1,47 @@
+.session-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.session-container fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  box-shadow: 1px 1px 3px 0px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.session-container fieldset:hover {
+  transform: scale(1.05);
+}
+
+.session-container fieldset h4 {
+  text-decoration: none;
+  font-size: 20px;
+  color: #83aa17;
+  font-weight: 600;
+}
+
+.session-container fieldset p {
+  color: #3f3f3f;
+  margin-top: 6%;
+  font-size: 15px;
+}
+
+.session-container fieldset button {
+  background-color: #c6f44b;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 8px;
+  border: none;
+  box-shadow: 1px 1px 3px 0px;
+  cursor: pointer;
+}
+
+.session-container fieldset button:hover {
+  background-color: #83aa17;
+}

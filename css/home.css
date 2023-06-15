@@ -1,0 +1,87 @@
+/* IMAGEM INICIO */
+
+#imagem-inicio {
+  width: 100%;
+  position: relative;
+}
+
+#imagem-inicio > img {
+  width: 100%;
+}
+
+#imagem-inicio > button {
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: #c6f44b;
+  position: absolute;
+  right: 6%;
+  bottom: 20%;
+  padding: 15px 30px;
+  border: none;
+  transition: 1s;
+  box-shadow: 1px 1px 3px 0px;
+  cursor: pointer;
+}
+
+#imagem-inicio > button:hover {
+  background-color: #83aa17;
+}
+
+@media (max-width: 540px) {
+  #imagem-inicio > button {
+    font-size: 12px;
+    padding: 10px;
+    transition: 1s;
+  }
+}
+
+/* CARD DAS SESSÕES */
+
+.session-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px 16px 0px 16px;
+}
+
+.session-container fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  box-shadow: 1px 1px 3px 0px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.session-container fieldset:hover {
+  transform: scale(1.05);
+}
+
+.session-container fieldset h4 {
+  text-decoration: none;
+  font-size: 17px;
+  color: #83aa17;
+  font-weight: 600;
+}
+
+.session-container fieldset p {
+  color: #3f3f3f;
+  margin-top: 6%;
+  font-size: 15px;
+}
+
+.session-container fieldset button {
+  background-color: #c6f44b;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 0px;
+}
+
+.session-container fieldset button:hover {
+  background-color: #83aa17;
+}

@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2? family= Inter:wght@100;200;300;400;500;600 & family= Roboto+Slab:wght@300 & display= trocar");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+}
+
+header > .topo {
+  background-color: #35a1ea;
+}
+
+header > #menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #c6f44b;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header > #menu a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 12px;
+}
+
+@media (max-width: 540px) {
+  header > #menu a {
+    font-size: 12px;
+    transition: 1s;
+  }
+}
+
+header > #menu a:hover {
+  background-color: #83aa17;
+  transition: 1s;
+}
+
+header > #menu > .left-items {
+  display: flex;
+  justify-content: flex-start;
+}
+
+header > #menu > .right-items a {
+  background-color: black;
+  color: #c6f44b;
+}
+
+header > #menu > .right-items a:hover {
+  background-color: #c6f44b;
+  color: #000000;
+  transition: 1s;
+}
+
+/* TÍTULO DE SESSÕES */
+
+.session-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.session-title > div {
+  width: fit-content;
+}
+
+.session-title h1 {
+  margin: 0;
+}
+
+.session-title hr {
+  width: 100%;
+  height: 2px;
+  background: #83aa17;
+}
+
+/* REDES SOCIAIS */
+
+#social-media-container {
+  display: flex;
+  justify-content: center;
+}
+
+#social-media-container > img {
+  max-width: 700px;
+  width: 90%;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #c6f44b;
+  padding: 12px;
+  gap: 24px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 8px;
+}
+
+@media (max-width: 710px) {
+  .footer-container {
+    justify-content: flex-start;
+  }
+}
+
+.footer-column a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #080808;
+}
+
+.footer-column a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #83aa17;
+}
+
+.footer-column .footer-contact {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+#footer-copyright {
+  padding: 16px 0;
+  text-align: center;
+  background-color: #c6f44b;
+}
