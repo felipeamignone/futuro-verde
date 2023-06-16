@@ -208,13 +208,16 @@
 
 #form-inputs input {
   margin-bottom: 8px;
+  height: 30px;
+  font-size: 16px;
 }
 
 .action-buttons {
+  margin-top: 16px;
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  gap: 8px;
+  gap: 12px;
 }
 
 .action-buttons > button {

@@ -106,7 +106,9 @@ function onOpenEditVoluntary(voluntaryId) {
     editVoluntary(voluntaryId, event);
   };
 
-  const selectedVoluntary = volunteers.find((voluntary) => voluntary.id == voluntaryId);
+  const selectedVoluntary = volunteers.find(
+    (voluntary) => voluntary.id == voluntaryId
+  );
 
   inputName.value = selectedVoluntary.name;
   inputEmail.value = selectedVoluntary.email;
@@ -192,7 +194,9 @@ function editVoluntary(voluntaryId, event) {
     birthday,
   };
 
-  const voluntaryIndex = volunteers.findIndex((voluntary) => voluntary.id == voluntaryId);
+  const voluntaryIndex = volunteers.findIndex(
+    (voluntary) => voluntary.id == voluntaryId
+  );
   volunteers.splice(voluntaryIndex, 1, newVoluntary);
 
   localStorage.setItem("volunteers", JSON.stringify(volunteers));
@@ -204,7 +208,9 @@ function editVoluntary(voluntaryId, event) {
 function rmvVoluntary(voluntaryId) {
   let volunteers = getVolunteers();
 
-  const voluntaryIndex = volunteers.findIndex((voluntary) => voluntary.id == voluntaryId);
+  const voluntaryIndex = volunteers.findIndex(
+    (voluntary) => voluntary.id == voluntaryId
+  );
   volunteers.splice(voluntaryIndex, 1);
   localStorage.setItem("volunteers", JSON.stringify(volunteers));
 
@@ -225,7 +231,7 @@ function onOpenModal(voluntaryId) {
 
 function onCloseModal() {
   const modal = document.querySelector("#modal-confirmation");
-  
+
   modal && (modal.style.display = "none");
 }
 
@@ -233,4 +239,37 @@ function onCloseModal() {
 function verifyIfExistIdOnCart(voluntaryId) {
   const volunteers = getVolunteers();
   return volunteers.some((voluntary) => voluntary.id === voluntaryId);
+}
+
+const inputPhone = document.querySelector(".input-phone");
+inputPhone.addEventListener("input", handlePhone, false);
+
+function handlePhone(e) {
+  e.target.value = phoneMask(e.target.value);
+}
+
+function phoneMask(phone) {
+  return phone
+    .replace(/\D/g, "")
+    .replace(/^(\d)/, "($1")
+    .replace(/^(\(\d{2})(\d)/, "$1) $2")
+    .replace(/(\d{4})(\d{1,5})/, "$1-$2")
+    .replace(/(-\d{5})\d+?$/, "$1");
+}
+
+const inputBirthday = document.querySelector(".input-birthday");
+inputBirthday.addEventListener("input", handleDate, false);
+
+function handleDate(e) {
+  e.target.value = dateMask(e.target.value);
+}
+
+function dateMask(date) {
+  return date
+    .replace(/\D/g, "")
+    .replace(/\D/g, "")
+    .replace(/(\d{2})(\d)/, "$1/$2")
+    .replace(/(\d{2})(\d)/, "$1/$2")
+    .replace(/(\d{2})(\d{2})$/, "$1$2")
+    .slice(0, 10);
 }

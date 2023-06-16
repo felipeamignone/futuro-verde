@@ -61,7 +61,8 @@
           </div>
           <div class="add-voluntary-container">
             <button id="add-voluntary" onclick="{onOpenAddVoluntary()}">
-              Adicionar <br/> Voluntário
+              Adicionar <br />
+              Voluntário
             </button>
           </div>
         </div>
@@ -69,25 +70,47 @@
         <div id="drawer-form" class="drawer-background">
           <div class="drawer-content">
             <h2 class="modal-title">Registrar Voluntário</h2>
-            <span class="material-symbols-outlined close-icon" onclick="{onCloseDrawer()}">
+            <span
+              class="material-symbols-outlined close-icon"
+              onclick="{onCloseDrawer()}"
+            >
               close
             </span>
             <form onsubmit="addVoluntary(event)" id="voluntary-form">
               <div id="form-inputs">
                 <label for="name">Nome:</label>
-                <input type="text" name="name" class="input-name" required />
+                <input
+                  type="text"
+                  name="name"
+                  class="input-name"
+                  placeholder="Nome Sobrenome"
+                  required
+                />
 
                 <label for="email">Email:</label>
-                <input type="email" name="email" class="input-email" required />
+                <input
+                  type="email"
+                  name="email"
+                  class="input-email"
+                  placeholder="email@voluntario.com"
+                  required
+                />
 
                 <label for="phone">Telefone:</label>
-                <input type="text" name="phone" class="input-phone" required />
+                <input
+                  type="text"
+                  name="phone"
+                  class="input-phone"
+                  placeholder="(00) 0000-0000"
+                  required
+                />
 
                 <label for="address">Endereço:</label>
                 <input
                   type="text"
                   name="address"
                   class="input-address"
+                  placeholder="R. do candidado, 99"
                   required
                 />
 
@@ -96,6 +119,7 @@
                   type="text"
                   name="birthday"
                   class="input-birthday"
+                  placeholder="00/00/0000"
                   required
                 />
 
@@ -112,7 +136,10 @@
 
         <div id="modal-confirmation" class="modal-background">
           <div class="modal-content">
-            <span class="material-symbols-outlined close-icon" onclick="{onCloseModal()}">
+            <span
+              class="material-symbols-outlined close-icon"
+              onclick="{onCloseModal()}"
+            >
               close
             </span>
 

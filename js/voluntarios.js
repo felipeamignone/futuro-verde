@@ -128,3 +128,35 @@ function verifyIfExistIdOnCart(voluntaryId) {
   return volunteers.some((voluntary) => voluntary.id === voluntaryId);
 }
 
+const inputPhone = document.querySelector(".input-phone");
+inputPhone.addEventListener("input", handlePhone, false);
+
+function handlePhone(e) {
+  e.target.value = phoneMask(e.target.value);
+}
+
+function phoneMask(phone) {
+  return phone
+    .replace(/\D/g, "")
+    .replace(/^(\d)/, "($1")
+    .replace(/^(\(\d{2})(\d)/, "$1) $2")
+    .replace(/(\d{4})(\d{1,5})/, "$1-$2")
+    .replace(/(-\d{5})\d+?$/, "$1");
+}
+
+const inputBirthday = document.querySelector(".input-birthday");
+inputBirthday.addEventListener("input", handleDate, false);
+
+function handleDate(e) {
+  e.target.value = dateMask(e.target.value);
+}
+
+function dateMask(date) {
+  return date
+    .replace(/\D/g, "")
+    .replace(/\D/g, "")
+    .replace(/(\d{2})(\d)/, "$1/$2")
+    .replace(/(\d{2})(\d)/, "$1/$2")
+    .replace(/(\d{2})(\d{2})$/, "$1$2")
+    .slice(0, 10);
+}
