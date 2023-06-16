@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,10 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/shared.css" />
 
-    <title>Futuro Verde | Projetos</title>
+    <title>Futuro Verde | Login</title>
   </head>
   <body>
     <div>
@@ -39,47 +39,25 @@
       <main>
         <div class="session-title">
           <div>
-            <h1>Projetos</h1>
+            <h1>Login</h1>
             <hr />
           </div>
         </div>
+        <div id="login-container">
+          <fieldset>
+            <form onsubmit="onSubmitLogin(event)">
+              <div class="form-input">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required />
+              </div>
 
-        <div class="session-container">
-          <fieldset>
-            <h4>Alfredo Marcondes</h4>
-            <br />
-            <img src="img/Marcondes.jpeg" alt="Alfredo Marcondes" />
-            <p>
-              Alfredo Marcondes, uma cidade encantadora localizada no interior
-              do estado de São Paulo, Sua população estimada de 4.184 habitantes
-            </p>
-            <button onclick="window.location.href = 'marcondes.html'">
-              Ver Mais
-            </button>
-          </fieldset>
-          <fieldset>
-            <h4>Presidente Prudente</h4>
-            <br />
-            <img src="img/Prudente.jpg" alt="Presidente Prudente" />
-            <p>
-              Presidente Prudente é um município brasileiro no interior do
-              estado de São Paulo. Sua população estimada de 231.953 habitantes
-            </p>
-            <button onclick="window.location.href = 'prudente.html'">
-              Ver Mais
-            </button>
-          </fieldset>
-          <fieldset>
-            <h4>Santo Expedito</h4>
-            <br />
-            <img src="img/expedito.png" alt="Santo Expedito" />
-            <p>
-              Santo Expedito, uma cidade encantadora localizada no interior do
-              estado de São Paulo. Sua população era de 3.035 habitantes
-            </p>
-            <button onclick="window.location.href = 'expedito.html'">
-              Ver Mais
-            </button>
+              <div class="form-input">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" required />
+              </div>
+
+              <button type="submit">Entrar</button>
+            </form>
           </fieldset>
         </div>
       </main>
@@ -136,5 +114,11 @@
       </div>
       <div id="footer-copyright">&#169; 2023 all rights reservd</div>
     </footer>
+    <script>
+      function onSubmitLogin(e) {
+        e.preventDefault();
+        window.location.href = "cadastro.html";
+      }
+    </script>
   </body>
 </html>

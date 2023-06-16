@@ -1,0 +1,43 @@
+#login-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#login-container > fieldset {
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 3px 0px;
+  border: none;
+  padding: 16px;
+}
+
+#login-container > fieldset > form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#login-container > fieldset > form button {
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #c6f44b;
+  padding: 15px 30px;
+  border: none;
+  box-shadow: 1px 1px 3px 0px;
+  cursor: pointer;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  max-width: 500px;
+  gap: 4px;
+}
+
+.form-input > input {
+    height: 20px;
+}
