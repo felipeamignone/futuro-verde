@@ -31,7 +31,100 @@ function generateRows() {
 
 generateRows();
 
+// DRAWER FORM CONTROL
+
+function onOpenDrawer() {
+  const drawer = document.querySelector("#drawer-form");
+  drawer && (drawer.style.display = "block");
+}
+
+function onCloseDrawer() {
+  const drawerForm = document.querySelector("#drawer-form");
+  const inputName = document.querySelector(".input-name");
+  const inputEmail = document.querySelector(".input-email");
+  const inputPhone = document.querySelector(".input-phone");
+  const inputAddress = document.querySelector(".input-address");
+  const inputBirthday = document.querySelector(".input-birthday");
+
+  inputName.value = "";
+  inputEmail.value = "";
+  inputPhone.value = "";
+  inputAddress.value = "";
+  inputBirthday.value = "";
+
+  drawerForm && (drawerForm.style.display = "none");
+}
+
+function onOpenAddVoluntary() {
+  const modalTitle = document.querySelector(".modal-title");
+  const form = document.querySelector("#voluntary-form");
+
+  modalTitle.innerHTML = "Adicionar Voluntário";
+  form.onsubmit = function (event) {
+    addVoluntary(event);
+  };
+
+  onOpenDrawer();
+}
+
+window.onclick = function (event) {
+  const modalForm = document.querySelector("#drawer-form");
+  if (event.target == modalForm) {
+    onCloseDrawer();
+  }
+};
+
 // VOLUNTEERS CONTROL
 function getVolunteers() {
   return JSON.parse(localStorage.getItem("volunteers")) || [];
 }
+
+function setVolunteers(newFilmList) {
+  localStorage.setItem("volunteers", JSON.stringify(newFilmList));
+}
+
+function addVoluntary(event) {
+  event.preventDefault();
+  let volunteers = getVolunteers();
+
+  const name = event.target.elements.name.value;
+  const email = event.target.elements.email.value;
+  const phone = event.target.elements.phone.value;
+  const address = event.target.elements.address.value;
+  const birthday = event.target.elements.birthday.value;
+
+  // GENERATE A RANDOM ID WITH 4 DIGITS VERIFYING IF EXISTS
+  let randomId = (Math.random() * 10000).toFixed(0);
+  function generateNewId(initialValue) {
+    let finalId = initialValue;
+    if (verifyIfExistIdOnCart(initialValue)) {
+      initialValue += 1;
+      return generateNewId(initialValue);
+    }
+    return finalId;
+  }
+
+  const newVoluntaryId = generateNewId(randomId);
+
+  const newVoluntary = {
+    id: newVoluntaryId,
+    name,
+    email,
+    phone,
+    address,
+    birthday,
+  };
+
+  volunteers.push(newVoluntary);
+  setVolunteers(volunteers);
+
+  generateRows();
+  onCloseDrawer();
+}
+
+// UTILS
+function verifyIfExistIdOnCart(voluntaryId) {
+  const volunteers = getVolunteers();
+  return volunteers.some((voluntary) => voluntary.id === voluntaryId);
+}
+

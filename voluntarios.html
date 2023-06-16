@@ -27,7 +27,7 @@
             <a href="projetos.html">Projetos</a>
             <a href="parceria.html">Parcerias</a>
             <a href="sobrenos.html">Sobre Nós</a>
-            <a href="voluntarios.html">Voluntarios</a>
+            <a href="voluntarios.html">Voluntários</a>
           </div>
           <div class="right-items">
             <a href="login.html">Login</a>
@@ -38,7 +38,7 @@
       <main>
         <div class="session-title">
           <div>
-            <h1>Voluntarios</h1>
+            <h1>Voluntários</h1>
             <hr />
           </div>
         </div>
@@ -52,6 +52,56 @@
             </thead>
             <tbody class="table-body"></tbody>
           </table>
+          <div class="add-voluntary-container only-name">
+            <button id="add-voluntary" onclick="{onOpenAddVoluntary()}">
+              Quero ser <br />
+              Voluntário
+            </button>
+          </div>
+        </div>
+
+        <div id="drawer-form" class="drawer-background">
+          <div class="drawer-content">
+            <h2 class="modal-title">Registrar Voluntário</h2>
+            <span class="material-symbols-outlined" onclick="{onCloseDrawer()}">
+              close
+            </span>
+            <form onsubmit="addVoluntary(event)" id="voluntary-form">
+              <div id="form-inputs">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" class="input-name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="input-email" required />
+
+                <label for="phone">Telefone:</label>
+                <input type="text" name="phone" class="input-phone" required />
+
+                <label for="address">Endereço:</label>
+                <input
+                  type="text"
+                  name="address"
+                  class="input-address"
+                  required
+                />
+
+                <label for="birthday">Nascimento:</label>
+                <input
+                  type="text"
+                  name="birthday"
+                  class="input-birthday"
+                  required
+                />
+
+                <div class="action-buttons">
+                  <button onclick="{onCloseDrawer()}" class="cancel-button">
+                    CANCELAR
+                  </button>
+                  <button type="submit" class="submit-button">SALVAR</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </main>
     </div>

@@ -27,7 +27,7 @@
             <a href="projetos.html">Projetos</a>
             <a href="parceria.html">Parcerias</a>
             <a href="sobrenos.html">Sobre Nós</a>
-            <a href="voluntarios.html">Voluntarios</a>
+            <a href="voluntarios.html">Voluntários</a>
           </div>
           <div class="right-items">
             <a href="login.html">Login</a>
@@ -38,7 +38,7 @@
       <main>
         <div class="session-title">
           <div>
-            <h1>Gerencie os Voluntarios</h1>
+            <h1>Gerencie os Voluntários</h1>
             <hr />
           </div>
         </div>
@@ -67,12 +67,11 @@
         <div id="drawer-form" class="drawer-background">
           <div class="drawer-content">
             <h2 class="modal-title">Registrar Voluntário</h2>
-            <span class="material-symbols-outlined" onclick="{onCloseDrawer()}">
+            <span class="material-symbols-outlined close-icon" onclick="{onCloseDrawer()}">
               close
             </span>
             <form onsubmit="addVoluntary(event)" id="voluntary-form">
               <div id="form-inputs">
-                <!-- TODO: Ajustar inputs de acordo com formulario do voluntário -->
                 <label for="name">Nome:</label>
                 <input type="text" name="name" class="input-name" required />
 
@@ -111,7 +110,7 @@
 
         <div id="modal-confirmation" class="modal-background">
           <div class="modal-content">
-            <span class="material-symbols-outlined" onclick="{onCloseModal()}">
+            <span class="material-symbols-outlined close-icon" onclick="{onCloseModal()}">
               close
             </span>
 

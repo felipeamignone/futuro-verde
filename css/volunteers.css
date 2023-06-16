@@ -4,6 +4,9 @@
   width: 80%;
   max-width: 800px;
 }
+.add-voluntary-container.only-name {
+  max-width: 500px;
+}
 
 #add-voluntary {
   font-size: 14px;
@@ -206,31 +209,39 @@
   margin-bottom: 8px;
 }
 
-#form-inputs button:hover {
-  box-shadow: 2px 2px #00000080;
-}
-
 .action-buttons {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  gap: 8px;
+}
+
+.action-buttons > button {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: none;
+  box-shadow: 1px 1px 3px 0px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .submit-button {
-  background-color: #403f3e;
-  color: #f0f0f0;
-  padding: 2px;
-  border-radius: 4px;
-  border-color: #0e0e0e;
-  cursor: pointer;
-  margin-left: 8px;
+  background-color: #c6f44b;
+}
+
+.submit-button:hover {
+  background-color: #83aa17;
 }
 
 .cancel-button {
-  background-color: #f0f0f0;
-  color: #403f3e;
-  padding: 2px;
-  border-radius: 4px;
-  border-color: #0e0e0e;
+  background-color: #fd3030;
+}
+.cancel-button:hover {
+  background-color: #df2323;
+}
+
+.close-icon {
   cursor: pointer;
 }
