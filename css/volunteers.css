@@ -2,16 +2,29 @@
   display: flex;
   justify-content: flex-end;
   width: 80%;
-
+  max-width: 800px;
 }
 
 #add-voluntary {
-  margin: 16px 0 8px 10%;
-  padding: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #c6f44b;
+  padding: 8px 16px;
+  border: none;
+  box-shadow: 1px 1px 3px 0px;
   cursor: pointer;
- background-color:  #35A1EA;
- color: #c8f64b;
- border: 1px solid rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+@media (max-width: 570px) {
+  #add-voluntary {
+    font-size: 10px;
+  }
+}
+
+#add-voluntary:hover {
+  background-color: #83aa17;
 }
 
 #volunteers-container {
@@ -19,19 +32,37 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin-top: 42px
+  gap: 16px;
+}
+
+#table-container {
+  display: block;
+  width: 80%;
+  max-width: 800px;
+}
+
+@media (max-width: 710px) {
+  #table-container {
+    overflow: auto;
+  }
 }
 
 /* VOLUNTEERS TABLE STYLES */
+
 #volunteers-table {
-  background-color: #35A1EA;
-  color: #c8f64b;
-  width: 80%;
+  background-color: #35a1ea3b;
+  color: #000000;
+  width: 100%;
+  max-width: 800px;
   border-collapse: collapse;
 }
 
+#volunteers-table.only-name {
+  max-width: 500px;
+}
+
 #volunteers-table .table-head {
-  background-color:#35A1EA;
+  background-color: #35a1ea;
 }
 
 #volunteers-table td,
@@ -46,11 +77,20 @@
   font-weight: 700;
 }
 
+@media (max-width: 570px) {
+  #volunteers-table th {
+    font-size: 16px;
+  }
+  #volunteers-table td {
+    font-size: 12px;
+  }
+}
+
 #volunteers-table .name-cell {
   width: 40%;
 }
 
-#volunteers-table .birthday-cell>div {
+#volunteers-table .birthday-cell > div {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -80,7 +120,7 @@
   transform: scale(1);
 }
 
-#volunteers-table .options-menu>li {
+#volunteers-table .options-menu > li {
   border: solid 1px black;
   display: flex;
   padding: 4px;
@@ -90,7 +130,7 @@
   align-items: center;
 }
 
-#volunteers-table .options-menu>li:hover {
+#volunteers-table .options-menu > li:hover {
   background-color: #4193ca;
 }
 
@@ -150,7 +190,7 @@
   top: 20%;
 }
 
-.drawer-content>span {
+.drawer-content > span {
   cursor: pointer;
   position: absolute;
   right: 8px;

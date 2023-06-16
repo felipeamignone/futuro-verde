@@ -27,7 +27,7 @@
   background-color: #83aa17;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 570px) {
   #imagem-inicio > button {
     font-size: 12px;
     padding: 10px;

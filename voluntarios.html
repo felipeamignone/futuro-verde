@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpg" href="img/icon-ong.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/partners.css" />
+    <title>Futuro verde</title>
+    <link rel="stylesheet" href="css/volunteers.css" />
     <link rel="stylesheet" href="css/shared.css" />
 
-    <title>Futuro Verde | Parceria</title>
+    <!-- import icons from google fonts-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
+
   <body>
     <div>
       <header>
@@ -40,16 +38,20 @@
       <main>
         <div class="session-title">
           <div>
-            <h1>Parcerias</h1>
+            <h1>Voluntarios</h1>
             <hr />
           </div>
         </div>
-        <div class="images-container">
-          <img src="img/logo-fipp.png" alt="FIPP" />
 
-          <img src="img/Unoeste.png" />
-
-          <img src="img/Logo rede.jpg" />
+        <div id="volunteers-container">
+          <table id="volunteers-table" class="only-name">
+            <thead>
+              <tr class="table-head">
+                <th>Nome</th>
+              </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+          </table>
         </div>
       </main>
     </div>
@@ -105,5 +107,6 @@
       </div>
       <div id="footer-copyright">&#169; 2023 all rights reservd</div>
     </footer>
+    <script src="js/voluntarios.js"></script>
   </body>
 </html>

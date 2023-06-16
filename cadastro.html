@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Futuro verde</title>
-    <link rel="stylesheet" href="css/volunteersControl.css" />
+    <link rel="stylesheet" href="css/volunteers.css" />
     <link rel="stylesheet" href="css/shared.css" />
 
     <!-- import icons from google fonts-->
@@ -27,6 +27,7 @@
             <a href="projetos.html">Projetos</a>
             <a href="parceria.html">Parcerias</a>
             <a href="sobrenos.html">Sobre Nós</a>
+            <a href="voluntarios.html">Voluntarios</a>
           </div>
           <div class="right-items">
             <a href="login.html">Login</a>
@@ -35,22 +36,30 @@
       </header>
 
       <main>
+        <div class="session-title">
+          <div>
+            <h1>Gerencie os Voluntarios</h1>
+            <hr />
+          </div>
+        </div>
         <div id="volunteers-container">
-          <table id="volunteers-table">
-            <thead>
-              <tr class="table-head">
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Endereço</th>
-                <th>Nascimento</th>
-              </tr>
-            </thead>
-            <tbody class="table-body"></tbody>
-          </table>
+          <div id="table-container">
+            <table id="volunteers-table">
+              <thead>
+                <tr class="table-head">
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Telefone</th>
+                  <th>Endereço</th>
+                  <th>Nascimento</th>
+                </tr>
+              </thead>
+              <tbody class="table-body"></tbody>
+            </table>
+          </div>
           <div class="add-voluntary-container">
             <button id="add-voluntary" onclick="{onOpenAddVoluntary()}">
-              ADICIONAR VOLUNTÁRIO
+              Adicionar <br/> Voluntário
             </button>
           </div>
         </div>
@@ -63,7 +72,7 @@
             </span>
             <form onsubmit="addVoluntary(event)" id="voluntary-form">
               <div id="form-inputs">
-                <!-- TODO: Ajustar inputs de acordo com formulario do voluntario -->
+                <!-- TODO: Ajustar inputs de acordo com formulario do voluntário -->
                 <label for="name">Nome:</label>
                 <input type="text" name="name" class="input-name" required />
 

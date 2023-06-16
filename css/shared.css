@@ -40,12 +40,14 @@ header > #menu a {
   display: inline-block;
   font-size: 20px;
   padding: 12px;
+  font-weight: 700;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 570px) {
   header > #menu a {
     font-size: 12px;
     transition: 1s;
+    padding: 4px;
   }
 }
 
@@ -91,6 +93,13 @@ header > #menu > .right-items a:hover {
   width: 100%;
   height: 2px;
   background: #83aa17;
+}
+
+@media (max-width: 570px) {
+  .session-title h1 {
+    font-size: 20px;
+    transition: 1s;
+  }
 }
 
 /* REDES SOCIAIS */
@@ -145,6 +154,12 @@ footer {
   text-decoration: none;
   cursor: pointer;
   color: #83aa17;
+}
+
+@media (max-width: 570px) {
+  .footer-column a {
+    font-size: 12px;
+  }
 }
 
 .footer-column .footer-contact {
