@@ -61,6 +61,7 @@
 }
 
 #volunteers-table.only-name {
+  width: 80%;
   max-width: 500px;
 }
 
